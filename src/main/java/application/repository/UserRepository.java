@@ -1,12 +1,17 @@
 package application.repository;
 
-import application.model.Users;
+import application.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 
 @Repository
-public interface UserRepository extends MongoRepository<Users, Long> {
+public interface UserRepository extends MongoRepository<User, Long> {
+
+    Optional<User> findUserByUserName(String userName, String password);
+
 
 
 }
