@@ -29,4 +29,5 @@ jobs:
         java-version: 17.0
         distribution: 'temurin'
     - name: Build with Gradle
+      run: gradle wrapper
       run: ./gradlew build
