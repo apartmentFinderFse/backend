@@ -41,6 +41,9 @@ jobs:
     steps:
     - name: Setup Java JDK
       uses: actions/setup-java@v3.10.0
+      with:
+        distribution: 'temurin' # See 'Supported distributions' for available options
+        java-version: '17'
 
     - name: Checkout repository
       uses: actions/checkout@v3
