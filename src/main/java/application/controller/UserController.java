@@ -18,12 +18,10 @@ public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     @Autowired
-    private final UserRepository userRepository;
+    private UserRepository userRepository;
     @Autowired
     private UserService userService;
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+
 
 
     @PostMapping("register")
